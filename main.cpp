@@ -66,7 +66,7 @@ void timer(int)
 
 }
 
- void ground(void)
+ void ground(void) //groud 
  {
 
     glClear(GL_COLOR_BUFFER_BIT);
