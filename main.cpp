@@ -1,7 +1,6 @@
 #include<GL/glut.h>
 #include<stdio.h>
 #include<math.h>
-
 #include <time.h>
 
 float x_direction=-0.65;
@@ -29,7 +28,7 @@ float random_num()
 
 void score(int score_value){
     char r2[50];
-    itoa(score_value,r2,10);
+    sprintf(r2,"%d",score_value);
     char r1[]="Points : ";
     glColor3f(1.0,1.0,1.0);
     glRasterPos3f(-0.98,0.9,0.0);
@@ -44,7 +43,7 @@ void score(int score_value){
 
 void health(int health_value){
     char r2[50];
-    itoa(health_value,r2,10);
+  sprintf(r2,"%d",health_value);
     char r1[]="Health : ";
     glColor3f(1.0,1.0,1.0);
     glRasterPos3f(0.70,0.9,0.0);
@@ -70,7 +69,7 @@ void finish(int score_value){
     glClear(GL_COLOR_BUFFER_BIT);
 
     char r3[50];
-    itoa(score_value,r3,10);
+  sprintf(r3,"%d",score_value);
     char r1[]="*********GAME OVER*********";
     char r2[]="Total point : ";
     glColor3f(1.0,1.0,1.0);
@@ -196,10 +195,10 @@ glEnd();
 void DrawCircle(float cx, float cy, float r, int num_segments) {
     glBegin(GL_LINE_LOOP);
     for (int ii = 0; ii < num_segments; ii++)   {
-        float theta = 2.0f * 3.1415926f * float(ii) / float(num_segments);//get the current angle
-        float x = r * cosf(theta);//calculate the x component
-        float y = r * sinf(theta);//calculate the y component
-        glVertex2f(x + cx, y + cy);//output vertex
+        float theta = 2.0f * 3.1415926f * float(ii) / float(num_segments);
+        float x = r * cosf(theta);
+        float y = r * sinf(theta);
+        glVertex2f(x + cx, y + cy);
     }
     glEnd();
 }
@@ -298,7 +297,7 @@ glClearColor(1.0,1.0,1.0,1.0);
      glutInitDisplayMode(GLUT_RGB|GLUT_SINGLE);
      glutInitWindowSize(1000,700);
      glutInitWindowPosition(200,20);
-     glutCreateWindow("stick man animation");
+     glutCreateWindow("stick man Game ");
      glutTimerFunc(0,timer,0);
      glutDisplayFunc(display);
     glutSpecialFunc(keyboard_keys);

@@ -241,3 +241,13 @@
 1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
 	<_mingw.h>
 
+1658212379 source:f:\cgproject\stickman\main.cpp
+	<GL/glut.h>
+	<stdio.h>
+	<math.h>
+	<time.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\time.h
+	<_mingw.h>
+	<stddef.h>
+
